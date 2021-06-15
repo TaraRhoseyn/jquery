@@ -7,7 +7,7 @@
     max-width: 1050px;
 }
 
-.card {
+.box {
     flex: 1; /* make contents controllable with flexbox */
     display: flex;
     flex-flow: column;
@@ -16,3 +16,13 @@
     padding: 20px;
     background-color: #fff;
 }
+
+.makeRed {
+    background-color: red;
+}
+
+.makeBlue {
+    background-color: blue;
+}
+
+.
