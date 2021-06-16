@@ -14,16 +14,17 @@ $('button').mouseleave(function(){
 });
 
 $(document).ready(function(){
-    $('.box').click(function(){
+    $('.box').on("click", function(){
         var classNames = $(this).attr("class").split(" "); // we're saying we're splitting them by the spaces between the classes, will give us two strings
-        $('.' + classNames[1].css("background-color"))
+        $('.' + classNames[1]).css("background-color","red"); // the first string will be 'box', and the second 'one' 
     });
 
 // if we want specific box to change colour when pressed, such an 'if' statement
 
     var classNames = $(this).attr("class").split(" ");
-    var boxNames = classNames[0];
-    var classname = classNames[1];
+    var boxName = classNames[0];
+    var className = classNames[1];
+    
     if ($(this).css("background-color") == "rbg(255, 0, 0)") {
         // if this object is already red, turn it black
         $("." + className).css('background-color', '#000');
@@ -32,7 +33,7 @@ $(document).ready(function(){
         // then change the colour of all emenets
         // with the same class name as the clicked element
         // to red. 
-        $('.' + boxClass).css('background-color', '#000');
+        $('.' + boxName).css('background-color', '#000');
         $('.' + className).css('background-color', 'red');
 
     }
